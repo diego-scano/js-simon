@@ -48,9 +48,9 @@ var timeFunction = setInterval(function() {
     }
 
       var results = document.getElementById('results');
-      results.innerText = 'Hai indovinato ' + rightNumbers.length + ' numeri. I numeri del Computer erano ' + computerRandomNumbers + ' e i numeri che hai indovinato tu sono: ' + rightNumbers;
+      results.innerText = 'Hai indovinato ' + rightNumbers.length + ' numero/i. I numeri del Computer erano ' + computerRandomNumbers + ' e tu hai indovinato: ' + rightNumbers;
 
-  }, 50);
+  }, 1);
     clearInterval(timeFunction);
   }
 
