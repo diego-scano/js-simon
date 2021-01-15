@@ -20,10 +20,9 @@ alert('I numeri generati dal Computer sono:  ' + computerRandomNumbers);
 
 var userNumbers = [];
 var rightNumbers = [];
-var wrongNumbers = [];
 
 var countdown = document.getElementById('countdown');
-var secondsNum = 3;
+var secondsNum = 30;
 
 var timeFunction = setInterval(function() {
 
@@ -43,13 +42,10 @@ var timeFunction = setInterval(function() {
       } else {
         userNumbers.push(user);
       }
-    }
       if(computerRandomNumbers.includes(user)) {
         rightNumbers.push(user);
       }
-      if(!computerRandomNumbers.includes(user)) {
-        wrongNumbers.push(user);
-      }
+    }
 
       var results = document.getElementById('results');
       results.innerText = 'Hai indovinato ' + rightNumbers.length + ' numeri. I numeri del Computer erano ' + computerRandomNumbers + ' e i numeri che hai indovinato tu sono: ' + rightNumbers;
@@ -57,7 +53,5 @@ var timeFunction = setInterval(function() {
   }, 50);
     clearInterval(timeFunction);
   }
-
-
 
 }, 1000);
